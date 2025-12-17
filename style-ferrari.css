@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: korataki;
+    src: url(font/Korataki.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: korataki;
+}
+
+#wrapper {
+    width: 1440px;
+    margin: 0 auto; 
+}
+
+#menu {
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#logo {
+    margin-left: 26px;
+}
+
+#menu-list {
+    display: flex;
+}
+
+#menu-1 {
+    margin-left: 90px;
+}
+#menu-2 {
+    margin-left: 90px;
+}
+#menu-3 {
+    margin-left: 90px;
+}
+
+#menu-1 li {
+    text-decoration: none;
+    color: #ffff ;
+    list-style: none;
+}
+
+#menu-1 li a{
+    text-decoration: none;
+    color: #ffff ;
+}
+#menu-1 li a:hover{
+    text-decoration: none;
+    color: #FF1E00 ;
+}
+#menu-3 li {
+    text-decoration: none;
+    color: #ffff ;
+    list-style: none;
+}
+
+#menu-3 li a{
+    text-decoration: none;
+    color: #ffff ;
+}
+#menu-3 li a:hover{
+    text-decoration: none;
+    color: #FF1E00 ;
+}
+
+ul {
+    list-style: none;
+    color: #ffffff;
+    display: flex;
+}
+ul li {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+}
+ul li a {
+    display: block;
+    padding-bottom: 5px;
+    color: #FFF;
+    text-decoration: none;
+    color: #ffffff;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+ul li ul.dropdown {
+    width: 300px;
+    position: absolute;
+    z-index: 999999;
+    display: none;
+    background-color: #000;
+}
+ul li a:hover {
+    color: #FF1E00;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+#banner {
+    height: 600px;
+    width: 100%;
+    background: url(pic/ferrari-banner.png);
+    float: left;
+}
+
+#banner p {
+    color: #FFF;
+    font-size: 32px;
+    margin-top: 441px;
+    margin-left: 70px;
+}
+
+#info {
+    height: 401px;
+    width: 100%;
+    background-color: #000;
+    float: left;
+}
+
+#drivers {
+    background-color: #000;
+    width: 100%;
+    height: 591px;
+    justify-content: center;
+    float: left;
+}
+
+#drivers p {
+    display: flex;
+    color: #FFF;
+    margin: auto;
+    justify-content: center;
+}
+
+.drivers-pic {
+    display: flex;
+    justify-content: center;
+    margin-top: 49px;
+}
+
+#driver1 {
+    width: 358px;
+    height: 450px;
+    background: url(pic/drivers1.png) ;
+}
+
+#driver1-container, #driver2-container,#driver3-container{
+    position: relative;
+}
+
+#driver2-info, #driver3-info {
+    position: absolute;
+    width: 358px;
+    height: 450px;
+    top: 0;
+    left: 112px;
+    background-color: rgba(0, 0, 0, 85%);
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s opacity;
+    font-family: kanit;
+
+}
+
+#driver1-info {
+    position: absolute;
+    width: 358px;
+    height: 450px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 85%);
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s opacity;
+    font-family: kanit;
+
+}
+
+#d1-info-text, #d2-info-text, #d3-info-text {
+    margin-left: 53px;
+    margin-top: 69px;
+}
+
+#driver1-info h1,#driver2-info h1,#driver3-info h1 {
+    font-size: 20px;
+}
+
+#d1-info-text2,#d2-info-text2,#d3-info-text2 {
+    font-size: 16px;
+    font-family: kanit;
+    padding-top: 35px;
+}
+
+
+#driver1:hover + #driver1-info, #driver2:hover + #driver2-info, #driver3:hover + #driver3-info {
+    opacity: 1;
+}
+
+
+#driver2 {
+    width: 358px;
+    height: 450px;
+    background: url(pic/drivers2.png) ;
+    margin-left: 112px;
+}
+
+#driver3 {
+    width: 358px;
+    height: 450px;
+    background:url(pic/drivers3.png) ;
+    margin-left: 112px;
+}
+
+#logo1{
+    background: url(pic/logo.png);
+    width: 207px;
+    height: 23px;
+    margin-left: 73px;
+}
+
+#logo2{
+    background: url(pic/xbox.png);
+    width: 74.94px;
+    height: 23px;
+    margin-left: 37px;
+}
+
+#footer {
+    width: 100%;
+    height: 146px;
+    background-color: #000;
+    float: left;
+    align-items: center; 
+}
+
+#footer-info {
+    width: 100%;
+    height: 146px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center; 
+}
+
+#footer-logo {
+    display: flex;
+}
+
+#footer p {
+    color: #FFF;
+    font-size: 10px;
+    float: right;
+    margin: 0;
+    margin-right: 70px; 
+}
+
+hr {
+    border-top: 1px solid rgb(255, 255, 255);
+  }
+
+#info-text {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    font-family: kanit;
+}
+
+#text1 h1{
+    font-family: kanit;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 51px;
+}
+
+#text1 p{
+    font-family: kanit;
+    font-size: 16px;
+    margin-top: 46px;
+}
+#text2 h1{
+    font-family: kanit;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 51px;
+}
+
+#text2 p{
+    font-family: kanit;
+    font-size: 16px;
+    margin-top: 46px;
+}
+#text3 h1{
+    font-family: kanit;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 51px;
+}
+
+#text3 p{
+    font-family: kanit;
+    font-size: 16px;
+    margin-top: 46px;
+}
+
+#text1, #text2{
+    margin-right: 60px;
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> F1 sim racing BKK GP LIVE</title>
+    <link rel="stylesheet" href="style-live.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="js/cdtimer.js"></script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="menu">
+            <div id="logo">
+                <a href="index.html"><img src="pic/logo.png"></a>
+            </div>
+            <div id="menu-list">
+                <div id="menu-1">
+                    <li><a href="#">ABOUT</a></li>
+                </div>
+                <div id="menu-2">
+                    <ul>
+                    <li>
+                    <a href="#">WATCH</a>
+                    <ul class="dropdown">
+                        <li><a href="#">LIVE</a></li>
+                        <li><a href="#">PREVIOUS LIVE</a></li>
+                    </ul>
+                    </li>
+                    </ul>
+                </div>
+                <div id="menu-3">
+                        <li><a href="#">NEWS</a></li>
+                </div>
+            </div>
+        </div>
+    
+        <div id="watch2">
+
+              
+            
+            <!-- Tab 1 Content -->
+            <div class="page-content tab1">
+                <div id="tap1-content">
+                    <img src="pic/tab1-video.mp4"alt="">
+                </div>
+            </div><!-- end container -->
+
+            <!-- Tab 2 Content -->
+            <div class="page-content tab2">
+                <div id="tap2-content">
+                    <img src="pic/monitor2.png" alt="">
+                </div>
+            </div><!-- end container -->
+            
+            <!-- Tab 3 Content -->
+            <div class="page-content tab3">
+                <div id="tap3-content">
+                    <img src="pic/monitor3.png" alt="">
+                </div>
+            </div><!-- end container -->
+            <div class="page-content tab4">
+                <div id="tap4-content">
+                    <img src="pic/monitor4.png" alt="">
+                </div>
+            </div><!-- end container -->
+            
+            <div class="container-text-center">
+              <div class="category-button" data-target="tab1">
+                <img src="pic/tab1-pic2.png" alt="">
+              </div>
+              <div class="category-button" data-target="tab2">
+                <img src="pic/tab2-pic2.png" alt="">
+              </div>
+              <div class="category-button" data-target="tab3">
+                <img src="pic/tab3-pic2.png" alt="">
+              </div>
+              <div class="category-button" data-target="tab4">
+                <img src="pic/tab4-pic2.png" alt="">
+              </div>
+            </div>
+
+            <script>
+                // Change button to active when clicked
+$(".category-button").click(function() {
+  $(".category-button").removeClass("active");
+  $(this).addClass("active");
+});
+
+
+// Makes variables for button and page content 
+var $categoryButton = $(".category-button");
+var $pageContent = $(".page-content");
+
+// Hide all page content shows first one
+$(".page-content")
+  .hide()
+  .first()
+  .show();
+
+// When button is clicked, show content 
+$categoryButton.on("click", function(e) {
+var $category = $(this).data("target");
+  $pageContent
+    .hide()
+    .find('img').hide()
+    .end()
+    .filter("." + $category)
+    .show()
+    .find('img').fadeIn();
+});
+            </script>
+
+        </div>
+
+
+        <!--<div id="watch">
+            <div id="live-mainbox">
+                <img src="pic/live-mainbox.png" alt="">
+            </div>
+
+                <div id="scroll-box">
+                    <div id="box">box1</div>
+                    <div id="box">box2</div>
+                    <div id="box">box3</div>
+                    <div id="box">box4</div>
+                    <div id="box">box5</div>
+                    <div id="box">box6</div>
+                    <div id="box">box7</div>
+                </div>
+                
+                <script>// Change button to active when clicked
+                    $(".category-button").click(function() {
+                      $(".category-button").removeClass("active");
+                      $(this).addClass("active");
+                    });
+                    
+                    
+                    // Makes variables for button and page content 
+                    var $categoryButton = $(".category-button");
+                    var $pageContent = $(".page-content");
+                    
+                    // Hide all page content shows first one
+                    $(".page-content")
+                      .hide()
+                      .first()
+                      .show();
+                    
+                    // When button is clicked, show content 
+                    $categoryButton.on("click", function(e) {
+                    var $category = $(this).data("target");
+                      $pageContent
+                        .hide()
+                        .find('img').hide()
+                        .end()
+                        .filter("." + $category)
+                        .show()
+                        .find('img').fadeIn();
+                    });</script>
+        </div>-->
+
+
+
+        <div id="map">
+            <div id="map-pic"></div>
+            <div id="driver1-map">
+            <div id="driver1-icon"></div>
+            <div id="driver1-hover">Dani Moreno</div>
+            </div>
+            <div id="driver2-map">
+            <div id="driver2-icon"></div>
+            <div id="driver2-hover">Josh Idowu</div>
+            </div>
+        </div>
+
+        <div id="driver-status">
+            <p>Driver Status</p>
+            <div id="driver-info">
+                <div id="driver1-info">
+                    <div id="q-rs">
+                        <i class="fa-solid fa-chevron-down"></i>
+                            <select id="size_select">
+                                <option value="option1">
+                                    Dani Moreno</option>
+                                <option value="option2">
+                                    Josh Idowu</option>
+                                <option value="option3">
+                                    Sebastian Job</option>
+                                <option value="option4">
+                                    Frederik Rasmussenb</option>
+                            </select>
+
+                            <div id="option1" class="size_chart">
+                                <div id="pic-info">
+                                    <img src="pic/driver1-st-pic.png" alt="">
+                                </div>
+                                <div id="text-info">
+                                    <p1>อันดับ : </p1>  1<br> 
+                                    <p1>ยางรถ : </p1>HARD<br>
+                                    <p1>รอบการเข้า pit :</p1> 2<br>
+                                    <p1>ตำแหน่งสตาร์ท :</p1>  3<br>
+                                    <p1>Fastest Lap :</p1> 00:00:00<br>
+                                </div>
+                                <div id="text-info">
+                                    <p1>อายุ :  </p1>23<br> 
+                                    <p1>คะแนนปัจจุบัน : </p1>200<br>
+                                    <p1>ทีม : </p1>Mclaren Shadow<br>
+                                </div>
+                            </div>
+                            <div id="option2" class="size_chart">
+                                <div id="pic-info">
+                                    <img src="pic/driver2-st-pic.png" alt="">
+                                </div>
+                                <div id="text-info">
+                                    <p1>อันดับ : </p1>  2<br> 
+                                    <p1>ยางรถ : </p1>HARD<br>
+                                    <p1>รอบการเข้า pit :</p1> 1<br>
+                                    <p1>ตำแหน่งสตาร์ท :</p1>  2<br>
+                                    <p1>Fastest Lap :</p1> 00:00:00<br>
+                                </div>
+                                <div id="text-info">
+                                    <p1>อายุ :  </p1>22<br> 
+                                    <p1>คะแนนปัจจุบัน : </p1>202<br>
+                                    <p1>ทีม : </p1>Red Bull<br>
+                                </div>
+                            </div>
+                            <div id="option3" class="size_chart">
+                                <div id="pic-info">
+                                    <img src="pic/driver3-st-pic.png" alt="">
+                                </div>
+                                <div id="text-info">
+                                    <p1>อันดับ : </p1>  3<br> 
+                                    <p1>ยางรถ : </p1>HARD<br>
+                                    <p1>รอบการเข้า pit :</p1> 2<br>
+                                    <p1>ตำแหน่งสตาร์ท :</p1>  4<br>
+                                    <p1>Fastest Lap :</p1> 00:00:00<br>
+                                </div>
+                                <div id="text-info">
+                                    <p1>อายุ :  </p1>24<br> 
+                                    <p1>คะแนนปัจจุบัน : </p1>182<br>
+                                    <p1>ทีม : </p1>Red Bull<br>
+                                </div>
+                            </div>
+                            <div id="option4" class="size_chart">
+                                <div id="pic-info">
+                                    <img src="pic/driver4-st-pic.png" alt="">
+                                </div>
+                                <div id="text-info">
+                                    <p1>อันดับ : </p1>  4<br> 
+                                    <p1>ยางรถ : </p1>HARD<br>
+                                    <p1>รอบการเข้า pit :</p1> 1<br>
+                                    <p1>ตำแหน่งสตาร์ท :</p1>  6<br>
+                                    <p1>Fastest Lap :</p1> 00:00:00<br>
+                                </div>
+                                <div id="text-info">
+                                    <p1>อายุ :  </p1>24<br> 
+                                    <p1>คะแนนปัจจุบัน : </p1>197<br>
+                                    <p1>ทีม : </p1>Red Bull<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div id="driver2-info">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <select id="size_select2">
+                        <option value="option1">
+                            Josh Idowu</option>
+                        <option value="option2">
+                            Dani Moreno</option>
+                        <option value="option3">
+                            Sebastian Job</option>
+                        <option value="option4">
+                            Frederik Rasmussenb</option>
+                    </select> 
+                    <div id="pic-info-r">
+                        <img src="pic/driver2-st-pic.png" alt="">
+                    </div>
+                    <div id="text-info-r">
+                        <p1>อันดับ : </p1>  2<br> 
+                        <p1>ยางรถ : </p1>HARD<br>
+                        <p1>รอบการเข้า pit :</p1> 1<br>
+                        <p1>ตำแหน่งสตาร์ท :</p1>  2<br>
+                        <p1>Fastest Lap :</p1> 00:00:00<br>
+                    </div>
+                    <div id="text-info-r">
+                        <p1>อายุ :  </p1>22<br> 
+                        <p1>คะแนนปัจจุบัน : </p1>202<br>
+                        <p1>ทีม : </p1>Red Bull<br>
+                    </div>
+                </div>
+          </div>
+        
+        
+          <script>
+            $(document).ready(function() {
+              // Hides dropdown content initially
+              $(".size_chart").hide();
+        
+              // Unhides the first option content
+              $("#option1").show();
+        
+              // Listen to dropdown for change
+              $("#size_select").change(function() {
+                // Rehide all content on change
+                $('.size_chart').hide();
+        
+                // Unhide the selected content
+                $('#' + $(this).val()).show();
+              });
+            });
+            </script>
+                </div>
+
+                <div id="footer">
+                    <hr>
+                    <div id="footer-info">
+                        <div id="footer-logo">
+                            <a href="index.html"><div id="logo1"></div></a>
+                            <a href="#"></a><div id="logo2"></div></a>
+                        </div>
+                        <p>© 2024 F1 SIMRACING BKK GP</p>
+                    </div>
+                </div>
+
+
+    </div>    
+    
+</body>
+</html>

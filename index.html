@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 sim racing BKK GP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <script src="js/cdtimer.js"></script>
+    <script src="cct.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
+
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="menu">
+            <div id="logo">
+                <a href="index.html"><img src="pic/logo.png"></a>
+            </div>
+            <div id="menu-list">
+                <div id="menu-1">
+                    <li><a href="#">ABOUT</a></li>
+                </div>
+                <div id="menu-2">
+                    <ul>
+                    <li>
+                    <a href="#">WATCH</a>
+                    <ul class="dropdown">
+                        <li><a href="#live.html">LIVE</a></li>
+                        <li><a href="#">PREVIOUS LIVE</a></li>
+                    </ul>
+                    </li>
+                    </ul>
+                </div>
+                <div id="menu-3">
+                        <li><a href="#">NEWS</a></li>
+                </div>
+            </div>
+        </div>
+
+        <div id="banner">
+            <div id="banner-logo"></div>
+            <div id="date">2024-08-24</div>
+            <section class="countdown">
+                <div class="days">
+                  <p class="counter__time" id="days"></p>
+                  <p class="counter__duration">days</p>
+                </div>
+                <p>:</p>
+                <div class="hours">
+                <p class="counter__time" id="hours"></p>
+                  <p class="counter__duration">hours</p>
+                </div>
+                <p>:</p>
+                <div class="minutes">
+                    <p class="counter__time" id="minutes"></p>
+                  <p class="counter__duration">minutes</p>
+                </div>
+                <p>:</p>
+                <div class="seconds">
+                    <p class="counter__time" id="seconds"></p>
+                  <p class="counter__duration">seconds</p>
+                </div>
+            </section>
+            <a href="live.html"><div id="banner-button">
+                รับชมถ่ายทอดสด
+            </div></a>
+                    </div>
+
+        <div id="schedule">
+            <p>ตารางแข่งขัน</p>
+            <div id="schedule-date">
+                <div id="day1">
+                    <p1>วันศุกร์ที่ 23 สิงหาคน 2024</p1><br>
+                    <p2>QUALIFYING  18:30 (GMT+7)</p2><br>
+                    <div id="day1-button">ดูย้อนหลัง</div>
+                </div>
+                <div id="day2">
+                    <p1>วันเสาร์ที่ 24 สิงหาคน 2024</p1><br>
+                    <p2>RACE  19:00  (GMT+7)  </p2><br>
+                    <a href="live.html"><div id="day2-button">รับชมถ่ายทอดสด</div>
+                    </a>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="qualify-result">
+            <p1>Qualify-result</p1>
+
+            <div id="result">
+                <div id="pos">
+                    <p>pos</p>
+                    1<br>
+                    2<br>  
+                    3<br>
+                    4<br>
+                    5<br>  
+                    6<br>
+                    7<br>
+                    8<br>
+                    9<br>
+                    10<br>
+                    11<br>
+                    12<br>
+                    13<br>
+                    14<br>
+                    15<br>
+                    16<br>
+                    17<br>
+                    18<br>
+                    19<br>
+                    20<br>
+                </div>
+
+                <div id="dv">
+                    <p>Driver</p>
+                    Frederik Rasmussen<br>
+                    Thomas Ronhaar<br>
+                    Bardia Broumand<br>
+                    Jarno Opmeer<br>
+                    Alfie Butcher<br>
+                    Nicolas Longuet<br>
+                    Lucas Blakeley<br>
+                    Ismael Fahssi<br>
+                    Daniel Bereznay<br>
+                    Brendon Leigh<br>
+                    Josh Idowu<br>
+                    Alvaro Carreton<br>
+                    Jake Benham<br>
+                    Tom Manley<br>
+                    Simon Weigang<br>
+                    Jed Norgrove<br>
+                    Wilson Hughes<br>
+                    Joni Tormala<br>
+                    Ulas Ozyildirim<br>
+                    Ruben Pedreno<br>
+
+                </div>
+
+                <div id="car">
+                    <p>car</p>
+                    Mclaren Shadow<br>
+                    Alpine Esports<br>
+                    Oracle Red Bull Sim Racing<br>
+                    Mercedes-AMG Esports Team<br>
+                    Aston Martin F1 Esports<br>
+                    Scuderia Ferrari Esports<br>
+                    Mclaren Shadow<br>
+                    Mercedes-AMG Esports Team<br>
+                    Oracle Red Bull Sim Racing<br>
+                    Scuderia Ferrari Esports<br>
+                    Aston Martin F1 Esports<br>
+                    Haas F1 Team Esports<br>
+                    Kick F1 Sim Racing Team<br>
+                    Scuderia Alphatauri Esports Team<br>
+                    Kick F1 Sim Racing Team<br>
+                    Scuderia Alphatauri Esports Team<br>
+                    Haas F1 Team Esports<br>
+                    Williams Esports<br>
+                    Ulas Williams Esports<br>
+                    Alpine Esports<br>  
+                </div>
+                <div id="laps">
+                    <p>Laps</p>
+                    21<br>
+                    22<br>
+                    21<br>
+                    23<br>
+                    24<br>
+                    23<br>
+                    22<br>
+                    23<br>
+                    21<br>
+                    23<br>
+                    16<br>
+                    17<br>
+                    15<br>
+                    16<br>
+                    17<br>
+                    9<br>
+                    8<br>
+                    8<br>
+                    9<br>
+                    8<br>
+                </div>
+
+                <div id="q-rs">
+                <!--dropdown menu-->
+                    <select id="size_select">
+                        <option value="option1">
+                            Q1
+                        </option>
+                        <option value="option2">Q2</option>
+                        <option value="option3">Q3</option>
+                    </select>
+                    
+                    <!--dropdown content-->
+                    <div id="option1" class="size_chart">
+                        1:30.031<br>
+                        1:30.243<br>
+                        1:30.350<br>
+                        1:29.909<br>
+                        1:30.221<br>
+                        1:30.179<br>
+                        1:30.143<br>
+                        1:30.531<br>
+                        1:30.451<br>
+                        1:30.566<br>
+                        1:30.481<br>
+                        1:29.965<br>
+                        1:30.397<br>
+                        1:30.562<br>
+                        1:30.646<br>
+                        1:30.756<br>
+                        1:30.757<br>
+                        1:30.770<br>
+                        1:30.793<br>
+                        1:30.948
+                    </div>
+                    <div id="option2" class="size_chart">
+                        1:29.374<br>
+                        1:29.165<br>
+                        1:29.922<br>
+                        1:29.573<br>
+                        1:29.932<br>
+                        1:29.801<br>
+                        1:29.941<br>
+                        1:30.122<br>
+                        1:29.718<br>
+                        1:29.851<br>
+                        1:30.129<br>
+                        1:30.200<br>
+                        1:30.221<br>
+                        1:30.278<br>
+                        1:30.529
+                    </div>
+                    <div id="option3" class="size_chart">
+                        1:29.179<br>
+                        1:29.407<br>
+                        1:29.485<br>
+                        1:29.507<br>
+                        1:29.537<br>
+                        1:29.542<br>
+                        1:29.614<br>
+                        1:29.683<br>
+                        1:29.710<br>
+                        1:30.502<br>
+
+                    </div>
+                </div>
+            </div>
+  </div>
+
+
+  <script>
+    $(document).ready(function() {
+      // Hides dropdown content initially
+      $(".size_chart").hide();
+
+      // Unhides the first option content
+      $("#option1").show();
+
+      // Listen to dropdown for change
+      $("#size_select").change(function() {
+        // Rehide all content on change
+        $('.size_chart').hide();
+
+        // Unhide the selected content
+        $('#' + $(this).val()).show();
+      });
+    });
+    </script>
+
+
+        <div id="standings">
+            <h1>Constuctor Standings</h1>
+            <div class="team1">
+                <p1>1</p1>
+                <p2><a href="#">MCLAREN SHADOW</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team2">
+                <p1>2</p1>
+                <p2><a href="ferrari.html">FERRARI</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team3">
+                <p1>3</p1>
+                <p2><a href="#">MERCEDES-AMG</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team4">
+                <p1>4</p1>
+                <p2><a href="#">RED BULL SIM RACING</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team5">
+                <p1>5</p1>
+                <p2><a href="#">KICK F1 SIM RACING</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team6">
+                <p1>6</p1>
+                <p2><a href="#">HAAS ESPORTS</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team7">
+                <p1>7</p1>
+                <p2><a href="#">WILLIAMS ESPORTS</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team8">
+                <p1>8</p1>
+                <p2><a href="#">ALPHATAURI ORLEN</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team9">
+                <p1>9</p1>
+                <p2><a href="#">ASTON MARTIN</a></p2>
+                <p3>235</p3>
+            </div>
+            <div class="team10">
+                <p1>10</p1>
+                <p2><a href="#">ALPINE ESPORTS</a></p2>
+                <p3>235</p3>
+            </div>
+        </div>
+
+        <div id="teams">
+            <p>Teams</p>
+            <div id="teams-pic">
+
+                <div id="teams-pic-row1">
+
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row1-team1"></div>
+                        <div id="row1-team1-name">
+                            <p>MERCEDES-AMG</p>
+                        </div>
+                     </div>
+                    
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row1-team2"></div>
+                        <div id="row1-team2-name">
+                            <p>SCUDERIA FERRARI</p>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div id="teams-pic-row2">
+
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row2-team3"></div>
+                        <div id="row2-team3-name">
+                            <p>KICK F1 SIM RACING</p>
+                        </div>
+                    </div>
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row2-team4"></div>
+                        <div id="row2-team4-name">
+                            <p>HAAS ESPORTS</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="teams-pic-row3">
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row3-team5"></div>
+                        <div id="row3-team5-name">
+                            <p>MCLAREN SHADOW</p>
+                    </div>
+                    </div>
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row3-team6"></div>
+                        <div id="row3-team6-name">
+                            <p>ASTON MARTIN</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="teams-pic-row4">
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row4-team7"></div>
+                        <div id="row4-team7-name">
+                            <p>RED BULL SIM RACING</p>
+                    </div>
+                    </div>
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row4-team8"></div>
+                        <div id="row4-team8-name">
+                            <p>ALPINE ESPORTS</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="teams-pic-row5">
+                    <a href="ferrari.html"><div id="team-container">
+                        <div id="row5-team9"></div>
+                        <div id="row5-team9-name">
+                            <p>WILLIAMS ESPORTS</p>
+                    </div>
+                    </div>
+                    <a href="#"><div id="team-container">
+                        <div id="row5-team10"></div>
+                        <div id="row5-team10-name">
+                            <p>ALPHATAURI ORLEN</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!--teams-pic-->
+        </div> <!--teams-->
+
+        <div id="news">
+            <p>ข่าวสารเพิ่มเติม</p>
+            <div id="news-pic">
+                <div id="main-news">
+                    <p>ประกาศปฏิทินการแข่งขันชิงแชมป์โลก<br>
+                        F1 Sim Racing 2023!</p>
+                </div>
+                <div id="news-container">
+                    <div id="news1">
+                        <p>F1 Sim Racing World Championship<br>
+                            ตัวอย่างกิจกรรม 3 - Rasmussen เป็นผู้นําทาง</p>
+                    </div>
+                    <div id="news2">
+                        <p>F1® Sim Racing World Championship<br>
+                            ดูตัวอย่างกิจกรรม</p>
+                    </div>
+                    <div id="news3">
+                        <p>Ronhaar คว้า F1 Sim Racing <br>
+                            2023 World Championship เปิดการแข่งขัน</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer">
+            <hr>
+            <div id="footer-info">
+                <div id="footer-logo">
+                    <a href="index.html"><div id="logo1"></div></a>
+                    <a href="#"></a><div id="logo2"></div></a>
+                </div>
+                <p>© 2024 F1 SIMRACING BKK GP</p>
+            </div>
+        </div>
+
+    </div><!--wrapper-->
+    
+</body>
+</html>
